@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.github.tatercertified.endship_elytra_nuker.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+  ],
+  "mixins": [
+    "EndShipMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
