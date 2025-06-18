@@ -15,17 +15,14 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.github.tatercertified.endship_elytra_nuker.fabric.Endship_elytra_nukerFabric"
+      "com.github.tatercertified.endship_elytra_nuker.fabric.EndshipElytraNukerFabric"
     ]
   },
   "mixins": [
     "endship_elytra_nuker.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.16.9",
-    "minecraft": ">=1.20",
-    "java": ">=17",
-    "architectury": ">=9.2.14",
-    "fabric-api": "*"
+    "fabricloader": "*",
+    "minecraft": ">=1.21.6"
   }
 }

@@ -1,6 +1,6 @@
 package com.github.tatercertified.endship_elytra_nuker.mixin;
 
-import com.github.tatercertified.endship_elytra_nuker.Endship_elytra_nuker;
+import com.github.tatercertified.endship_elytra_nuker.EndshipElytraNuker;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
@@ -17,13 +17,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class EndShipMixin {
     @Inject(method = "handleDataMarker", at = @At(value = "INVOKE", target = "Ljava/lang/String;startsWith(Ljava/lang/String;)Z", ordinal = 2, shift = At.Shift.AFTER), cancellable = true)
     private void cancelElytraPlacement(String string, BlockPos blockPos, ServerLevelAccessor serverLevelAccessor, RandomSource randomSource, BoundingBox boundingBox, CallbackInfo ci) {
-        if (Endship_elytra_nuker.shipItem.isEmpty()) {
+        if (EndshipElytraNuker.shipItem.isEmpty()) {
             ci.cancel();
         }
     }
 
     @ModifyArg(method = "handleDataMarker", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/decoration/ItemFrame;setItem(Lnet/minecraft/world/item/ItemStack;Z)V"), index = 0)
     private ItemStack modifyItemStack(ItemStack itemStack) {
-        return Endship_elytra_nuker.shipItem;
+        return EndshipElytraNuker.shipItem;
     }
 }

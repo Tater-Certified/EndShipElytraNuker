@@ -1,0 +1,33 @@
+# https://neoforged.net
+modLoader = "javafml"
+loaderVersion = "[0,)"
+license = "MIT"
+
+[[mods]]
+modId = "endship_elytra_nuker"
+version = "${version}"
+displayName = "Endship Elytra Nuker"
+authors = "QPCrummer"
+displayTest = "IGNORE_SERVER_VERSION"
+description = '''
+Deletes Endship Elytras
+'''
+
+[[mixins]]
+config="endship_elytra_nuker.mixins.json"
+
+# NeoForge Dependency
+[[dependencies.endship_elytra_nuker]]
+modId = "neoforge"
+type = "required"
+versionRange = "[0.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+# Minecraft Dependency
+[[dependencies.endship_elytra_nuker]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.6,)"
+ordering = "NONE"
+side = "BOTH"

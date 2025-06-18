@@ -9,7 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 
-public final class Endship_elytra_nuker {
+public final class EndshipElytraNuker {
     public static final String MOD_ID = "endship_elytra_nuker";
     public static ItemStack shipItem;
 
