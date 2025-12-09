@@ -2,7 +2,7 @@ package com.github.tatercertified.endship_elytra_nuker;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
@@ -14,7 +14,7 @@ public record SerializableItemStack(String identifier) {
         if (this.identifier.isEmpty()) {
             return ItemStack.EMPTY;
         }
-        ResourceLocation location = ResourceLocation.tryParse(this.identifier);
+        Identifier location = Identifier.tryParse(this.identifier);
         Optional<Holder.Reference<Item>> itemStackReference = BuiltInRegistries.ITEM.get(location);
         return itemStackReference.map(itemReference -> new ItemStack(itemReference, 1)).orElse(ItemStack.EMPTY);
     }
