@@ -1,0 +1,8 @@
+{
+  "id": "${mod_id}",
+  "version": "${version}",
+  "mixins": [
+    "endship_elytra_nuker.mixins.json"
+  ],
+  "wideners": []
+}
